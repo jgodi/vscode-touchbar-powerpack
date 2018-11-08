@@ -1,0 +1,67 @@
+{
+  "name": "vscode-touchbar-powerpack",
+  "displayName": "vscode-touchbar-powerpack",
+  "description": "Adds a few new buttons to your macs touchbar: collapse all, close all, rename",
+  "version": "1.0.0",
+  "publisher": "jgodi",
+  "respository": "TODO",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension",
+  "capabilities": {
+    "definitionProvider": "true"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "touchbar-powerback.closeall",
+        "group": "touchbar-powerpack1",
+        "title": "✘"
+      },
+      {
+        "command": "touchbar-powerback.collapseall",
+        "group": "touchbar-powerpack2",
+        "title": "☟"
+      },
+      {
+        "command": "touchbar-powerback.rename",
+        "group": "touchbar-powerpack3",
+        "title": "✎_"
+      }
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "command": "touchbar-powerback.closeall",
+          "group": "touchbar-powerpack1"
+        },
+        {
+          "command": "touchbar-powerback.collapseall",
+          "group": "touchbar-powerpack2"
+        },
+        {
+          "command": "touchbar-powerback.rename",
+          "group": "touchbar-powerpack3"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.21",
+    "eslint": "^4.11.0",
+    "@types/node": "^8.10.25",
+    "@types/mocha": "^2.2.42"
+  }
+}
