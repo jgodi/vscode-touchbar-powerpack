@@ -4,7 +4,7 @@
   "description": "Adds a few new buttons to your macs touchbar: collapse all, close all, rename",
   "version": "1.0.0",
   "publisher": "jgodi",
-  "respository": "https://github.com/jgodi/vscode-touchbar-powerpack",
+  "repository": "https://github.com/jgodi/vscode-touchbar-powerpack",
   "engines": {
     "vscode": "^1.28.0"
   },
